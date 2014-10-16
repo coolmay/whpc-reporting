@@ -1,0 +1,87 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.loading-mark {
+    background-image: url("/Content/Images/loading.gif");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    padding-left: 20px;
+}
+
+.tool-bar {
+    display: block;
+    padding: 15px;
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.tool-bar-lable {
+    margin-right: 5px;
+}
+
+.tool-bar-input {
+    margin-right: 10px;
+    width: 150px;
+}
+
+.content-panel {
+    min-height: 600px;
+}
+
+.chart {
+    margin-bottom: 30px;
+    height: 400px;
+}
+
+.chart-inline {
+    display: inline-block;
+    width: 50%;
+    height: 250px;
+}
+
+.owner-panel {
+    float: left;
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+}
+
+.job-panle {
+    float: right;
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+}
+
+.sub-list-group {
+    margin-top: 10px;
+}
+
+.sub-list-group-item {
+    /*background-color: #eee;*/
+}

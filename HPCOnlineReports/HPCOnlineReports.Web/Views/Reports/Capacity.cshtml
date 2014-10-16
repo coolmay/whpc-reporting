@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Capacity Planning Report";
+}
+
+<h2>Capacity Planning Report <small style="vertical-align:middle;">[<a href="javascript:void(0);" onclick="showHelp('Capacity planning report shows the CPU/Memory/Disk IO utilization trend over a period of time which can help you to do capacity planning.')">?</a>]</small></h2>
+
+@Html.Partial("_HelpBoxPartial")
+
+<hr />
+
+<div class="tool-bar form-inline">
+    <label class="tool-bar-lable control-label" for="cluster">Cluster:</label>
+    @Html.DropDownList("Clusters",null, new {id="cluster", @class = "tool-bar-input form-control" })
+    <label class="tool-bar-lable control-label" for="starttime">Start Time:</label>
+    <input id="starttime" class="tool-bar-input date-picker form-control" value="@ViewBag.StartTime"/>
+    <label class="tool-bar-lable control-label" for="endtime">End Time:</label>
+    <input id="endtime" class="tool-bar-input date-picker form-control" value="@ViewBag.EndTime"/>
+    <button id="btn_generate_charts" class="btn btn-primary" onclick="capacity_generate_charts_clicked();" data-loading-text="Generating...">Generate Charts</button>
+</div>
+
+@Html.Partial("_AlertBoxPartial")
+
+<div id="div_charts" class="content-panel">
+</div>
+

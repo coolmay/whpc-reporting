@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>HPC Online Reports</h1>
+    <p class="lead">HPC Online Reports is a demo website for seeing daily reports of HPC cluster.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Capacity Planning</h2>
+        <p>
+            Capacity planning report shows the CPU/Memory/Disk IO utilization trend over a period of time which can help you to do capacity planning.
+        </p>
+        <p><a class="btn btn-default" href="/Reports/Capacity">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Charge Back</h2>
+        <p>Charge back report is based on job resource usage, it shows how much money a user needs to pay for the jobs he runs  based on the rates you have set to different node groups.</p>
+        <p><a class="btn btn-default" href="/Reports/ChargeBack">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Cluster Utilization</h2>
+        <p>Cluster utilization report shows total core utilization time compared to total core available time or total core time in a period time. You can click on the line on the chart to see more details on node groups. The report excludes head node(s) and broker nodes, only counts compute nodes and workstation nodes.</p>
+        <p><a class="btn btn-default" href="/Reports/ClusterUtilization">Go &raquo;</a></p>
+    </div>
+</div>

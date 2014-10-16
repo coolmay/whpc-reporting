@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22013.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPCOnlineReports.Web", "HPCOnlineReports.Web\HPCOnlineReports.Web.csproj", "{98BDFDCC-7179-41A8-AEFF-BCC8165CBC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPCOnlineReports.Web.Tests", "HPCOnlineReports.Web.Tests\HPCOnlineReports.Web.Tests.csproj", "{378FA7EE-20FE-4647-8619-AEA66DCDB8BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C134F8BD-2317-4FBB-8DB9-9DA58E690719}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\InitializeDatabase.ps1 = Scripts\InitializeDatabase.ps1
+		Scripts\InitializeDatabase.sql = Scripts\InitializeDatabase.sql
+		Scripts\UploadMetricData.ps1 = Scripts\UploadMetricData.ps1
+		Scripts\UploadSettings.ps1 = Scripts\UploadSettings.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98BDFDCC-7179-41A8-AEFF-BCC8165CBC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BDFDCC-7179-41A8-AEFF-BCC8165CBC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BDFDCC-7179-41A8-AEFF-BCC8165CBC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BDFDCC-7179-41A8-AEFF-BCC8165CBC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378FA7EE-20FE-4647-8619-AEA66DCDB8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378FA7EE-20FE-4647-8619-AEA66DCDB8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378FA7EE-20FE-4647-8619-AEA66DCDB8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378FA7EE-20FE-4647-8619-AEA66DCDB8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dannyf.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HPCOnlineReports.Web.Tests\\HPCOnlineReports.Web.Tests.csproj
+		SccProjectName1 = HPCOnlineReports.Web.Tests
+		SccLocalPath1 = HPCOnlineReports.Web.Tests
+		SccProjectUniqueName2 = HPCOnlineReports.Web\\HPCOnlineReports.Web.csproj
+		SccProjectName2 = HPCOnlineReports.Web
+		SccLocalPath2 = HPCOnlineReports.Web
+	EndGlobalSection
+EndGlobal

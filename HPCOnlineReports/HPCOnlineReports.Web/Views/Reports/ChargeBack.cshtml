@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Charge Back Report";
+}
+
+<h2>Charge Back Report <small style="vertical-align:middle;">[<a href="javascript:void(0);" onclick="showHelp('Charge back report is based on job resource usage, it shows how much money a user needs to pay for the jobs he runs  based on the rates you have set to different node groups.')">?</a>]</small></h2>
+
+@Html.Partial("_HelpBoxPartial")
+
+<hr />
+
+<div class="tool-bar form-inline">
+    <label class="tool-bar-lable control-label" for="cluster">Cluster:</label>
+    @Html.DropDownList("Clusters",null, new {id="cluster", @class = "tool-bar-input form-control" })
+    <select id="report_type" class="tool-bar-input date-picker form-control">
+        <option id="option_daily" value="daily" @{ @(ViewBag.ReportType == "daily" ? "selected" : "") ;}>Daily Report</option>
+        <option id="option_weekly" value="weekly" @{ @(ViewBag.ReportType == "weekly" ? "selected" : "") ;}>Weekly Report</option>
+        <option id="option_monthly" value="monthly" @{ @(ViewBag.ReportType == "monthly" ? "selected" : "") ;}>Monthly Report</option>
+    </select>
+    <label class="tool-bar-lable control-label" for="startdate">Start Date:</label>
+    <input id="startdate" class="tool-bar-input date-picker form-control" value="@ViewBag.StartDate" />
+    <button id="btn_generate_reports" class="btn btn-primary" onclick="chargeback_generate_reports_clicked();" data-loading-text="Generating...">Generate Reports</button>
+</div>
+
+@Html.Partial("_AlertBoxPartial")
+
+<div id="div_reports" class="content-panel">
+    <div class="owner-panel">
+        <h4 id="owner_msg"></h4>
+        <div id="div_owners" class="list-group"></div>
+    </div>
+    <div class="job-panle">
+        <h4 id="job_msg"></h4>
+        <div id="div_jobs" class="list-group"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>

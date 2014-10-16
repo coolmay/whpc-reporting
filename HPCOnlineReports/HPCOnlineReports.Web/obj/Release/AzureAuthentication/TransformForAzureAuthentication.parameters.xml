@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AD_AudienceUriAppSetting" description="AD Audience Uri App Setting" defaultValue="https://hpcreporting.onmicrosoft.com/HPCOnlineReports.Web" tags="AD_AudienceUriAppSetting">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\Microsoft\\HPCReports\\HPCOnlineReports\\HPCOnlineReports\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/appSettings/add[@key='ida:AudienceUri']/@value" />
+  </parameter>
+  <parameter name="AD_RealmAppSetting" description="AD Realm App Setting" defaultValue="https://hpcreporting.onmicrosoft.com/HPCOnlineReports.Web" tags="AD_RealmAppSetting">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\Microsoft\\HPCReports\\HPCOnlineReports\\HPCOnlineReports\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/appSettings/add[@key='ida:Realm']/@value" />
+  </parameter>
+  <parameter name="AD_MetadataUrl" description="AD MetadataUrl App Setting" defaultValue="https://login.windows.net/hpcreporting.onmicrosoft.com/FederationMetadata/2007-06/FederationMetadata.xml" tags="AD_MetadataUrlAppSetting">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\Microsoft\\HPCReports\\HPCOnlineReports\\HPCOnlineReports\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/appSettings/add[@key='ida:FederationMetadataLocation']/@value" />
+  </parameter>
+  <parameter name="AD_APPIDUri" description="AD AppIDUri" defaultValue="APPIDUri" tags="ADrealmUri">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\Microsoft\\HPCReports\\HPCOnlineReports\\HPCOnlineReports\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/system.identityModel/identityConfiguration/audienceUris/add[@value='APPIDUri']/@value" />
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\Microsoft\\HPCReports\\HPCOnlineReports\\HPCOnlineReports\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/system.identityModel.services/federationConfiguration/wsFederation[@requireHttps='true']/@realm" />
+  </parameter>
+  <parameter name="AD_Issuer" description="AD Issuer" defaultValue="https://login.windows.net/hpcreporting.onmicrosoft.com/wsfed" tags="ADISSUER">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\Microsoft\\HPCReports\\HPCOnlineReports\\HPCOnlineReports\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/system.identityModel.services/federationConfiguration/wsFederation[@requireHttps='true']/@issuer" />
+  </parameter>
+</parameters>

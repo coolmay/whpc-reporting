@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Cluster Utilization Report";
+}
+
+<h2>Cluster Utilization Report <small style="vertical-align:middle;">[<a href="javascript:void(0);" onclick="showHelp('Cluster utilization report shows total core utilization time compared to total core available time or total core time in a period time. You can click on the line on the chart to see more details on node groups. The report excludes head node(s) and broker nodes, only counts compute nodes and workstation nodes.')">?</a>]</small></h2>
+
+@Html.Partial("_HelpBoxPartial")
+
+<hr />
+
+<div class="tool-bar form-inline">
+    <label class="tool-bar-lable control-label" for="cluster">Cluster:</label>
+    @Html.DropDownList("Clusters",null, new {id="cluster", @class = "tool-bar-input form-control" })
+    <label class="tool-bar-lable control-label" for="starttime">Start Time:</label>
+    <input id="starttime" class="tool-bar-input date-picker form-control" value="@ViewBag.StartTime" />
+    <label class="tool-bar-lable control-label" for="endtime">End Time:</label>
+    <input id="endtime" class="tool-bar-input date-picker form-control" value="@ViewBag.EndTime" />
+    <button id="btn_generate_charts" class="btn btn-primary" onclick="clusterutilization_generate_charts_clicked();" data-loading-text="Generating...">Generate Charts</button>
+</div>
+
+@Html.Partial("_AlertBoxPartial")
+
+<div id="div_charts" class="content-panel">
+</div>
+
